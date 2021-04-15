@@ -1,0 +1,65 @@
+.Display{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.Form{
+  width: 300px;
+  padding: 32px;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px #ccc;
+
+  .Form-input-name,
+  .Form-input-secName
+  {
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    font-size: 16px;
+    position: relative;
+    margin-bottom: 12px;
+    width: 100%;
+    padding: 0 0 10px 0;
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+    background-color: transparent;
+    outline: none;
+    transition: 0.3s;
+    &:focus{
+      opacity: 0.5;
+    }
+  }
+  .Form-modal{
+    color: #94a8d4;
+  }
+  .Button{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #0071f0;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover,
+    &:focus{
+      background-color: #02207c;
+    }
+  }
+  .Button-modal{
+    margin-left: 50px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #0071f0;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover,
+    &:focus{
+      background-color: #02207c;
+    }
+  }
+
+}
