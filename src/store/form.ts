@@ -1,26 +1,22 @@
-import {makeAutoObservable, makeObservable, observable} from "mobx";
+import {makeObservable, observable} from "mobx";
 
 
 class FormStore {
-    valueName = ''
-    valueSecName = ''
-    error = 'Hello'
+    error = ''
 
     constructor() {
-        makeObservable(this,{
+        makeObservable(this, {
             error: observable
         })
     }
-    ErrorForm () {
-            this.error = "ERRROROROROR"
+
+    ErrorForm(value: string) {
+        this.error = value
     }
 
 }
 
 export default new FormStore()
-
-
-
 
 
 /*
@@ -32,15 +28,12 @@ type FormStoreStateType = {
     error: string,
     ErrorForm: (error: string) => void
 }
-
 const FormStore: FormStoreStateType = observable( {
     valueName: '',
     valueSecName: '',
     error: '',
 
-
     ErrorForm: action(function (error: string) {
-
             FormStore.error = error
         }
     )

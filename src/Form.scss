@@ -12,7 +12,7 @@
   box-shadow: 0 4px 16px #ccc;
 
   .Form-input-name,
-  .Form-input-secName
+  .Form-input-surname
   {
     font-family: sans-serif;
     letter-spacing: 1px;
@@ -61,6 +61,12 @@
     &:focus{
       background-color: #02207c;
     }
+  }
+  .Validate-name,
+  .Validate-surname{
+    color: red;
+    padding: 5px 0 20px 0;
+    font-size: 12px;
   }
 
 }
