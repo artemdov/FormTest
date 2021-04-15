@@ -6,7 +6,7 @@ import FormStore from "./store/form";
 function App() {
   return (
       <div className="App">
-        <Form FormStore={FormStore}/>
+        <Form FormStore={FormStore} />
       </div>
   )
 }

@@ -1,3 +1,29 @@
+import {makeAutoObservable, makeObservable, observable} from "mobx";
+
+
+class FormStore {
+    valueName = ''
+    valueSecName = ''
+    error = 'Hello'
+
+    constructor() {
+        makeObservable(this,{
+            error: observable
+        })
+    }
+    ErrorForm () {
+            this.error = "ERRROROROROR"
+    }
+
+}
+
+export default new FormStore()
+
+
+
+
+
+/*
 import {action, observable} from "mobx"
 
 type FormStoreStateType = {
@@ -14,11 +40,12 @@ const FormStore: FormStoreStateType = observable( {
 
 
     ErrorForm: action(function (error: string) {
+
             FormStore.error = error
         }
     )
 
-    /*if(FormStore.valueName.length < 3) {
+    /!*if(FormStore.valueName.length < 3) {
         FormStore.error = 'enter the required text'
     } else if(FormStore.valueSecName.length < 3) {
         FormStore.error = 'enter the required text'
@@ -26,8 +53,8 @@ const FormStore: FormStoreStateType = observable( {
         FormStore.error = 'enter the required text'
     } else{
         return
-    }*/
+    }*!/
 
 })
 
-export default FormStore
+export default FormStore*/

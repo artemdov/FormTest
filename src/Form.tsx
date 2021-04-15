@@ -2,6 +2,7 @@ import React, {ChangeEvent, useState} from "react"
 import './App.css'
 import {observer} from "mobx-react-lite";
 import './Form.scss'
+import formStore from './store/form'
 
 type FormStoreType = {
     valueSecName: string,
@@ -15,8 +16,8 @@ type FormPropsType = {
 }
 
 
-export const Form: React.FC<FormPropsType> = observer(({FormStore}) => {
-
+export const Form: React.FC<FormPropsType> = observer(() => {
+    console.log('render')
     const [valueName, setValueName] = useState<string>('')
     const [valueSecName, setValueSecName] = useState<string>('')
     const [change, setChange] = useState<boolean>(false)
@@ -30,7 +31,7 @@ export const Form: React.FC<FormPropsType> = observer(({FormStore}) => {
 
     const handleDisplayChange = () => {
         if (valueName.length < 3) {
-            return alert(FormStore.ErrorForm('Error'))
+            return console.log( formStore.ErrorForm())
         }
         setChange(true)
     }
